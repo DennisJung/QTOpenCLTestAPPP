@@ -43,7 +43,7 @@ void SquareOcl::find_squares_gpu( const Mat& image, vector<vector<Point> >& squa
             // hack: use Canny instead of zero threshold level.
             // Canny helps to catch squares with gradient shading
             if( l == 0 )
-            {
+            {//
                 // do canny on OpenCL device
                 // apply Canny. Take the upper threshold from slider
                 // and set the lower to 0 (which forces edges merging)
