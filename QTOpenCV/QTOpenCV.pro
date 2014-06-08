@@ -12,14 +12,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    square_ocl.cpp
+    square_ocl.cpp \
+    global.cpp
 
 HEADERS  += mainwindow.h \
-    define.h \
-    square_ocl.h
+    square_ocl.h \
+    global.h
+
 
 INCLUDEPATH += -L~/workspace/opencv-2.4.4/include
-INCLUDEPATH += -L/usr/include/CL
 
 LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_core.so
 LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_imgproc.so
@@ -34,5 +35,9 @@ LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_contrib.so
 LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_legacy.so
 LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_flann.so
 LIBS += ~/workspace/opencv-2.4.4/lib/libopencv_nonfree.so
+
+INCLUDEPATH += -L/usr/include/CL
+
+LIBS += -lOpenCL
 
 FORMS    += mainwindow.ui
